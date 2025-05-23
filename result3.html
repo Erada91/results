@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تجربة صفحة نتائج</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h2>مرحباً! الصفحة تعمل بنجاح.</h2>
+
+  <input type="text" id="studentName" placeholder="اكتب اسمك الثلاثي">
+  <button onclick="showResult()">اظهر نتيجتي</button>
+  <p id="result"></p>
+
+  <script>
+    function showResult() {
+      const name = document.getElementById("studentName").value.trim();
+      if(name === "") {
+        document.getElementById("result").textContent = "يرجى إدخال اسمك.";
+      } else {
+        document.getElementById("result").textContent = "تم استلام الاسم: " + name;
+      }
+    }
+  </script>
+</body>
+</html>
